@@ -1,0 +1,9 @@
+<div class="order_form">
+	<h1>Please select your size, crust and sauce</h1>
+	<%= simple_form_for @pizza, url: toppings_path, remote: true do |f| %>
+	  <%= f.input :size, collection: @size %>
+	  <%= f.input :crust, collection: @crust %>
+	  <%= f.input :sauce, collection: @sauce %>
+	  <%= f.button :submit %>
+	<% end %>
+</div>
